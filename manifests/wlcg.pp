@@ -1,7 +1,7 @@
 class gridrepo::wlcg inherits gridrepo::params {
   
   
-  yumrepo {
+  yumbase::ai121yumrepo {
     "wlcg":
             descr => "WLCG repo  SL ${operatingsystemmajrelease} base ",
             baseurl => "http://linuxsoft.cern.ch/wlcg/sl${operatingsystemmajrelease}/\$basearch",
