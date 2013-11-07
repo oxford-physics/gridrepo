@@ -12,7 +12,7 @@
 #
 class gridrepo inherits gridrepo::params {
 
-
+tag("repo")
 
 if $emi_enabled {
   include gridrepo::emi

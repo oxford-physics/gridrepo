@@ -9,7 +9,7 @@ class gridrepo::wlcg inherits gridrepo::params {
             gpgcheck => '0',
             protect  => '1',
             gpgkey => 'absent',
-            includepkgs => ${wlcginclude_pkgs},
+            includepkgs => "${wlcginclude_pkgs}",
             enabled => $wlcg_enabled ? {
               true => "1",
               false => "0"
