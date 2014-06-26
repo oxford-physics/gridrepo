@@ -12,7 +12,7 @@ class gridrepo::params (
   
   $wlcg_enabled          = false,
   $wlcg_priority        = '10',   
-  $wlcginclude_pkgs   =  'HEP_OSlibs_SL6',
+  $wlcginclude_pkgs   =  'HEP_OSlibs_SL6, wlcg-voms-*',
 )
 {  
   
