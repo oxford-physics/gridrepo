@@ -2,6 +2,10 @@ class gridrepo::params (
   $emi_enabled  =  true,
   $emi_version  =  '3',  
   $emi_priority =  '15',
+  $emi_tpexclude = '',
+  $emi_baseexclude = '',
+  $emi_contexclude = '',
+  $emi_updatesexclude = '',
   
   $umd_enabled  =  false,
   $umd_version  =  '3',

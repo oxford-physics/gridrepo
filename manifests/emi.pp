@@ -9,6 +9,7 @@ class gridrepo::emi inherits gridrepo::params {
             gpgcheck => '0',
             protect  => '1',
             gpgkey => 'absent',
+            exclude => $emi_baseexclude,
             enabled => $emi_enabled ? {
               true => "1",
               false => "0"
@@ -22,6 +23,7 @@ class gridrepo::emi inherits gridrepo::params {
             gpgcheck => '0',
             protect  => '1',
             gpgkey => 'absent',
+            exclude => $emi_contexclude,
             enabled => $emi_enabled ? {
               true => "1",
               false => "0"
@@ -35,10 +37,12 @@ class gridrepo::emi inherits gridrepo::params {
             gpgcheck => '0',
             protect  => '1',
             gpgkey => 'absent',
+            exclude => $emi_tpexclude,
             enabled => $emi_enabled ? {
               true => "1",
               false => "0"
             };
+
   }
    yumbase::ai121yumrepo {
           "EMI-updates":
@@ -48,6 +52,7 @@ class gridrepo::emi inherits gridrepo::params {
             gpgcheck => '0',
             protect  => '1',
             gpgkey => 'absent',
+            exclude => $emi_updatesexclude,
             enabled => $emi_enabled ? {
               true => "1",
               false => "0"
