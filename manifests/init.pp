@@ -10,25 +10,20 @@
 #
 # Sample Usage:
 #
-class gridrepo inherits gridrepo::params {
+class gridrepo () inherits gridrepo::params {
 
-tag("repo")
+   tag("repo")
 
-if $emi_enabled {
-  include gridrepo::emi
-  }
-        
-if $umd_enabled {
-   include gridrepo::umd
-  }
-
-if $umd_testing_enabled {
-   include gridrepo::umdtesting
+   if $umd_enabled {
+      include gridrepo::umd
    }
-if $wlcg_enabled {
-   include gridrepo::wlcg
+
+   if $umd_testing_enabled {
+      include gridrepo::umdtesting
+   }
+   
+   if $wlcg_enabled {
+      include gridrepo::wlcg
    }
 
 }
-
-
